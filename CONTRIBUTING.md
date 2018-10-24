@@ -1,47 +1,37 @@
 # 貢献しています
 
-[Software Carpentry][swc-site] and [Data Carpentry][dc-site] are open source projects,
-and we welcome contributions of all kinds:
-new lessons,
-fixes to existing material,
-bug reports,
-and reviews of proposed changes are all welcome.
+[Software Carpentry] [swc-site]と[Data Carpentry] [dc-site]は
+オープンソースのプロジェクトであり、あらゆる種類の貢献を歓迎します：
+新しいレッスン、既存の資料への修正、
+バグレポート、提案された変更のレビューは大歓迎です。
 
 ## 貢献者の協定
 
-By contributing,
-you agree that we may redistribute your work under [our license](LICENSE.md).
-In exchange,
-we will address your issues and/or assess your change proposal as promptly as we can,
-and help you become a member of our community.
-Everyone involved in [Software Carpentry][swc-site] and [Data Carpentry][dc-site]
-agrees to abide by our [code of conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
+貢献することにより、あなたは[私たちの免許]（LICENSE.md）に基づいてあなたの仕事を再配布することに同意します。 引き換えに、
+私たちはあなたの問題に対処し、あなたの変更提案をできるだけ早く評価し、あなたが私たちのコミュニティの一員になるのを手伝います。 [Software Carpentry] [swc-site]と[Data Carpentry] [dc-site]に関わる全員が、私たちの[行動規範](https://docs.carpentries.org/topic_folders/policies/code-of -conduct.html)を遵守することに同意します。
 
 ## 貢献する方法
 
-The easiest way to get started is to file an issue
-to tell us about a spelling mistake,
-some awkward wording,
-or a factual error.
-This is a good way to introduce yourself
-and to meet some of our community members.
+始める最も簡単な方法は、スペルミス、不愉快な言葉遣い、
+または事実の誤りについて私たちに知らせるために問題を提出することです。
+ これはあなた自身を紹介し、コミュニティメンバーの
+一部と出会うための良い方法です。
 
-1.  If you do not have a [GitHub][github] account,
-    you can [send us comments by email][contact].
-    However,
-    we will be able to respond more quickly if you use one of the other methods described below.
+1. [GitHub] [github]アカウントをお持たなかったら、
+あなたは[私たちにメールでコメントを送る] [連絡先]をすることができます。
+でも、以下のいずれかの方法を使用すると、より迅速に対応することができます。
 
-2.  If you have a [GitHub][github] account,
-    or are willing to [create one][github-join],
-    but do not know how to use Git,
-    you can report problems or suggest improvements by [creating an issue][new-issue].
-    This allows us to assign the item to someone
-    and to respond to it in a threaded discussion.
+2. [GitHub] [github]アカウントを持っているかを[作たい][gitub-join]だったら、
+Gitの使い方がしらなくて、
+[issueを発行] [new-issue]で問題を報告するか
+改善を提案することができます。 誰かにアイテムを
+割り当て、スレッド化したディスカッションでそれに
+応答するのは私たちのためです。
 
-3.  If you are comfortable with Git,
-    and would like to add or change material,
-    you can submit a pull request (PR).
-    Instructions for doing this are [included below](#using-github).
+3. Gitを使いやすく、マテリアルを追加または変更したいだったら、
+資料を追加または変更したいとき、
+プルリクエスト(PR)を提出できます。
+ これを行うための手順は[以下のとお](#using-github)。
 
 ## 貢献するどこ
 
