@@ -81,12 +81,12 @@ Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://github.com/vlad/planets.git
+$ git remote add origin https://github.com/nobita/planets.git
 ~~~
 {: .language-bash}
 
-Make sure to use the URL for your repository rather than Vlad's: the only
-difference should be your username instead of `vlad`.
+Make sure to use the URL for your repository rather than のび太’s: the only
+difference should be your username instead of `nobita`.
 
 We can check that the command has worked by running `git remote -v`:
 
@@ -96,8 +96,8 @@ $ git remote -v
 {: .language-bash}
 
 ~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
+origin   https://github.com/nobita/planets.git (push)
+origin   https://github.com/nobita/planets.git (fetch)
 ~~~
 {: .output}
 
@@ -118,7 +118,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (9/9), 821 bytes, done.
 Total 9 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets
+To https://github.com/nobita/planets
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
@@ -190,7 +190,7 @@ $ git pull origin master
 {: .language-bash}
 
 ~~~
-From https://github.com/vlad/planets
+From https://github.com/nobita/planets
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~

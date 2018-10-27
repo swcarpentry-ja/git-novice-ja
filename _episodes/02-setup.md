@@ -24,8 +24,8 @@ where `verb` is what we actually want to do. So here is how
 のび太 sets up his new laptop:
 
 ~~~
-$ git config --global user.name "Vlad のび太"
-$ git config --global user.email "vlad@tran.sylvan.ia"
+$ git config --global user.name “野比 のび太"
+$ git config --global user.email “nobita@doko.demo.doa”
 ~~~
 {: .language-bash}
 

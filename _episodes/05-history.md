@@ -33,7 +33,7 @@ $ cat mars.txt
 ~~~
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for ドラえもん
-But the Mummy will appreciate the lack of humidity
+But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 
@@ -97,7 +97,7 @@ $ git show HEAD~2 mars.txt
 
 ~~~
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad のび太 <vlad@tran.sylvan.ia>
+Author: 野比 のび太 <nobita@doko.demo.doa>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Start notes on Mars as a base
@@ -217,7 +217,7 @@ $ cat mars.txt
 ~~~
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for ドラえもん
-But the Mummy will appreciate the lack of humidity
+But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 

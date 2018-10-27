@@ -31,7 +31,7 @@ $ cat mars.txt
 ~~~
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for ドラえもん
-But the Mummy will appreciate the lack of humidity
+But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 
@@ -76,7 +76,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 352 bytes, done.
 Total 3 (delta 1), reused 0 (delta 0)
-To https://github.com/vlad/planets
+To https://github.com/nobita/planets
    29aba7c..dabb4c8  master -> master
 ~~~
 {: .output}
@@ -121,7 +121,7 @@ $ git push origin master
 {: .language-bash}
 
 ~~~
-To https://github.com/vlad/planets.git
+To https://github.com/nobita/planets.git
  ! [rejected]        master -> master (non-fast-forward)
 error: failed to push some refs to 'https://github.com/vlad/planets.git'
 hint: Updates were rejected because the tip of your current branch is behind
@@ -150,7 +150,7 @@ remote: Counting objects: 5, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 1), reused 3 (delta 1)
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://github.com/nobita/planets
  * branch            master     -> FETCH_HEAD
 Auto-merging mars.txt
 CONFLICT (content): Merge conflict in mars.txt
@@ -249,7 +249,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (6/6), 697 bytes, done.
 Total 6 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To https://github.com/nobita/planets.git
    dabb4c8..2abf2b1  master -> master
 ~~~
 {: .output}
@@ -268,7 +268,7 @@ remote: Counting objects: 10, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 6 (delta 2), reused 6 (delta 2)
 Unpacking objects: 100% (6/6), done.
-From https://github.com/vlad/planets
+From https://github.com/nobita/planets
  * branch            master     -> FETCH_HEAD
 Updating dabb4c8..2abf2b1
 Fast-forward
@@ -345,7 +345,7 @@ Conflicts can also be minimized with project management strategies:
 > > {: .language-bash}
 > >
 > > ~~~
-> > -rw-r--r-- 1 vlad 57095 1.0K Mar  8 20:24 mars.jpg
+> > -rw-r--r-- 1 nobita 57095 1.0K Mar  8 20:24 mars.jpg
 > > ~~~
 > > {: .output}
 > >

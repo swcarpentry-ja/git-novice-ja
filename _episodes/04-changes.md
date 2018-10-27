@@ -182,7 +182,7 @@ $ git log
 
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad のび太 <vlad@tran.sylvan.ia>
+Author: 野比 のび太 <nobita@doko.demo.doa>
 Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on Mars as a base
@@ -376,7 +376,7 @@ $ cat mars.txt
 ~~~
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for ドラえもん
-But the Mummy will appreciate the lack of humidity
+But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 
@@ -393,7 +393,7 @@ index 315bf3a..b36abfd 100644
 @@ -1,2 +1,3 @@
  Cold and dry, but everything is my favorite color
  The two moons may be a problem for ドラえもん
-+But the Mummy will appreciate the lack of humidity
++But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 
@@ -429,7 +429,7 @@ index 315bf3a..b36abfd 100644
 @@ -1,2 +1,3 @@
  Cold and dry, but everything is my favorite color
  The two moons may be a problem for ドラえもん
-+But the Mummy will appreciate the lack of humidity
++But the ジャイアンさん will appreciate the lack of humidity
 ~~~
 {: .output}
 
@@ -471,19 +471,19 @@ $ git log
 
 ~~~
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-Author: Vlad のび太 <vlad@tran.sylvan.ia>
+Author: 野比 のび太 <nobita@doko.demo.doa>
 Date:   Thu Aug 22 10:14:07 2013 -0400
 
     Discuss concerns about Mars' climate for Mummy
 
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad のび太 <vlad@tran.sylvan.ia>
+Author: 野比 のび太 <nobita@doko.demo.doa>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Add concerns about effects of Mars' moons on ドラえもん
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad のび太 <vlad@tran.sylvan.ia>
+Author: 野比 のび太 <nobita@doko.demo.doa>
 Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on Mars as a base
@@ -527,7 +527,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >
 > ~~~
 > commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-> Author: Vlad のび太 <vlad@tran.sylvan.ia>
+> Author: 野比 のび太 <nobita@doko.demo.doa>
 > Date:   Thu Aug 22 10:14:07 2013 -0400
 >
 >    Discuss concerns about Mars' climate for Mummy
@@ -771,7 +771,7 @@ repository (`git commit`):
 > When committing you can name someone else as the author:
 >
 > ~~~
-> $ git commit --author="Vlad のび太 <vlad@tran.sylvan.ia>"
+> $ git commit --author=“野比 のび太 <nobita@doko.demo.doa>”
 > ~~~
 > {: .language-bash}
 >
@@ -784,13 +784,13 @@ repository (`git commit`):
 > >
 > > ~~~
 > > $ git add me.txt
-> > $ git commit -m "Update Vlad's bio." --author="Frank N. Stein <franky@monster.com>"
+> > $ git commit -m "Update のび太 bio." --author=“源 静香 <shizuka@minamoto.home>”
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
 > > [master 4162a51] Update Vlad's bio.
-> > Author: Frank N. Stein <franky@monster.com>
+> > Author: 源 静香 <shizuka@minamoto.home>
 > > 1 file changed, 2 insertions(+), 2 deletions(-)
 > > ~~~
 > > {: .output}
@@ -802,16 +802,16 @@ repository (`git commit`):
 > >
 > > ~~~
 > > commit 4162a51b273ba799a9d395dd70c45d96dba4e2ff
-> > Author: Frank N. Stein <franky@monster.com>
-> > Commit: Vlad のび太 <vlad@tran.sylvan.ia>
+> > Author: 源 静香 <shizuka@minamoto.home>
+> > Commit: 野比 のび太 <nobita@doko.demo.doa>
 > >
-> > Update Vlad's bio.
+> > Update のび太 bio.
 > >
 > > commit aaa3271e5e26f75f11892718e83a3e2743fab8ea
-> > Author: Vlad のび太 <vlad@tran.sylvan.ia>
-> > Commit: Vlad のび太 <vlad@tran.sylvan.ia>
+> > Author: 野比 のび太 <nobita@doko.demo.doa>
+> > Commit: 野比 のび太 <nobita@doko.demo.doa>
 > >
-> > Vlad's initial bio.
+> > のび太 initial bio.
 > > ~~~
 > > {: .output}
 > {: .solution}

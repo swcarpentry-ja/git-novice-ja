@@ -25,8 +25,8 @@ $ cat ~/.gitconfig
 
 ~~~
 [user]
-\tname = Vlad のび太
-\temail = vlad@tran.sylvan.ia
+\tname = 野比 のび太 
+\temail = nobita@doko.demo.doa
 [color]
 \tui = true
 [core]
@@ -166,7 +166,7 @@ $ git commit -m "Starting to think about Mars"
 ~~~
 {: .language-bash}
 
-Then make the same changes to `mars.doc` that we (or Vlad) previously made to `mars.txt`.
+Then make the same changes to `mars.doc` that we (or のび太) previously made to `mars.txt`.
 
 ~~~
 Cold and dry, but everything is my favorite color
