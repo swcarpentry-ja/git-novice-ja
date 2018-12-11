@@ -54,7 +54,7 @@ complete history of commits for a particular project and their metadata make up
 a [repository]({{ page.root }}/reference#repository). Repositories can be kept in sync
 across different computers, facilitating collaboration among different people.
 
-> ## The Long History of Version Control Systems
+> ## バージョンコントールシステムの長い歴史
 >
 > Automated version control systems are nothing new.
 > Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies.

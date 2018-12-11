@@ -3,36 +3,37 @@ layout: lesson
 root: .
 ---
 
-ドラえもんとのび太はユニバーサル・ミッションズ（ユーフォーリック州立大学の
-スピンオフ宇宙サービス）に雇われ、次の惑星着陸機を送って次の惑星着陸機を
-火星に送ることができるかどうかを調査しました。 彼らは同時に計画でも働くことが
-できるようにしたい、彼らが問題を抱えている場合、彼らは過去にあります。私たちは
-終了するのに多くの時間を費やしましたが、らは自分のコピーと電子メールの変更を
-元に戻します 上書きされたり、複製されたりすることがあります。
+ドラえもんとのび太はに火星に惑星無人探査機を送ることができるかどうか、
+検討するためにユニバーサル・ミッションズ（ユーフォーリック州立大学の
+スピンオフ宇宙サービス）に雇われました。 彼らはそれぞれ同時に計画を
+作りたいのですが、前にもこのような仕事をしようとしたら困ったことが
+ありました。一人ずつするにと、待っている時間がもったいないですが、
+それぞれ自分のコピーを編集して、メールで添付ファイルを送ったりすると
+情報の喪失や上書き、複製などといった問題が起こります。
 
 同僚は、[バーションの管理は]({{page.root}} / reference＃version-control)を使って作業を
 管理することを提案しています。 バーションの管理を使うはファイルを前後にメールするよりも優れています：
 
-*   Nothing that is committed to version control is ever lost, unless
-    you work really, really hard at it. Since all old versions of
-    files are saved, it's always possible to go back in time to see
-    exactly who wrote what on a particular day, or what version of a
-    program was used to generate a particular set of results.
+*   本当に消そうとしない限り、バージョン管理にコミットされているものは
+    失われることはありません。古いバージョンのファイルは
+    すべて保存されているため、特定の日に誰が何を書き込んだのか、
+    特定の結果を生成するためにどのバージョンのプログラムが使用されたのかなど、
+    正確に確認することが可能です。
 
-*   As we have this record of who made what changes when, we know who to ask
-    if we have questions later on, and, if needed, revert to a previous
-    version, much like the "undo" feature in an editor.
+*   誰が何をいつ変更したのかという記録があるため、後に問題が
+    生じた場合、連絡するべき人が分かる上に必要に応じて
+    "元に戻す"機能のように、以前のバージョンに戻すことができます。
 
-*   When several people collaborate in the same project, it's possible to
-    accidentally overlook or overwrite someone's changes. The version control
-    system automatically notifies users whenever there's a conflict between one
-    person's work and another's.
+*   同じプロジェクトで複数の人が協力し合う場合、
+    間違って誰かの変更を見落としたり上書きしたりする可能性があります。
+    バージョン管理システムは、二つの変更点の間に不一致がある場合、
+    自動的にユーザーに知らせてくれます。
 
-Teams are not the only ones to benefit from version control: lone
-researchers can benefit immensely.  Keeping a record of what was
-changed, when, and why is extremely useful for all researchers if they
-ever need to come back to the project later on (e.g., a year later,
-when memory has faded).
+バージョン管理を使うことによって得をするのはチームだけではありません: 個人で作業をしている
+研究者にもメリットがあります。何が、いつ、何故変わったのかを
+記録しておくことは、後で昔のプロジェクトを見返すことになった場合などに
+（例えば、1年後、プロジェクトの詳細を忘れてしまった時などに）、
+非常に便利です。
 
 Version control is the lab notebook of the digital world: it's what
 professionals use to keep track of what they've done and to

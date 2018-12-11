@@ -85,55 +85,55 @@ Issueを報告することによって、自分をコミュニティーに紹介
 
 ## 貢献していただきたくない個所
 
-Our lessons already contain more material than we can cover in a typical workshop,
-so we are usually *not* looking for more concepts or tools to add to them.
-As a rule,
-if you want to introduce a new idea,
-you must (a) estimate how long it will take to teach
-and (b) explain what you would take out to make room for it.
-The first encourages contributors to be honest about requirements;
-the second, to think hard about priorities.
+現在、通常のワークショップの時間内ではカバーしきれないほどの内容量がレッスンの資料に含まれています。
+ですので、新たにレッスンに含められる項目やツールなどは求めておりません。
+どうしても新しい内容を入れたい場合は、
+(a)新しい内容を教えるために掛かるおおよその時間、
+(b)新しい内容を入れる代わりにどの内容を取り出すか、
+そして、取り出す理由をご説明下さい。
+最初の点は、貢献する方々に可能かどうかを見極めていただくためです。
+二つ目の点は、どちらの内容を有線するべきかを考えていただくためです。
 
-We are also not looking for exercises or other material that only run on one platform.
-Our workshops typically contain a mixture of Windows, Mac OS X, and Linux users;
-in order to be usable,
-our lessons must run equally well on all three.
+上記に加え、一つのプラットホーム・OSでしか使用ができないなどといったプログラムのレッスン内容・資料などは求めておりません。
+私達が提供するワークショップでは、Windows、Mac OS X、Linuxなど、違ったOSを使用するユーザーが来ることがあります。
+そのため、新しいレッスンを作る際には、
+先述の三つのOSに対応可能である必要があります。
 
-## Using GitHub
+## GitHubの使い方
 
-If you choose to contribute via GitHub,
-you may want to look at
-[How to Contribute to an Open Source Project on GitHub][how-contribute].
-In brief:
+GitHubから資料を提供したい場合は、
+[GitHubでオープンソース・プロジェクトに貢献する方法][how-contribute]
+を参照して下さい。
+簡潔にまとめると：
 
-1.  The published copy of the lesson is in the `gh-pages` branch of the repository
-    (so that GitHub will regenerate it automatically).
-    Please create all branches from that,
-    and merge the [master repository][repo]'s `gh-pages` branch into your `gh-pages` branch
-    before starting work.
-    Please do *not* work directly in your `gh-pages` branch,
-    since that will make it difficult for you to work on other contributions.
+1.  現在公開されているレッスン内容はレポジトリの`gh-pages`というブランチに保存されています
+    (これはGitHubが自動的に変更点を公開させるためです)。
+    そのため、全てのブランチは`gh-pages`から分岐させ、
+    オリジナルの[レポジトリ][repo]の`gh-pages`を自身が分岐した`gh-pages`のブランチにマージ・合流させてから、
+    内容を変更してください。
+    他の内容・個所へ貢献することが難しくなるため、
+    *オリジナルの`gh-pages`から直接内容を変更することはお控え下さい。*
 
-2.  We use [GitHub flow][github-flow] to manage changes:
-    1.  Create a new branch in your desktop copy of this repository for each significant change.
-    2.  Commit the change in that branch.
-    3.  Push that branch to your fork of this repository on GitHub.
-    4.  Submit a pull request from that branch to the [master repository][repo].
-    5.  If you receive feedback,
-        make changes on your desktop and push to your branch on GitHub:
-        the pull request will update automatically.
+2.  私達は[GitHub flow][github-flow]を使って変更点などを管理しています：
+    1.  自身が持っているオリジナルのレポジトリのコピー(フォーク)に新しいブランチを作り、そのブランチで内容を変更します。
+    2.  作ったブランチ内で変更点をコミットします。
+    3.  そのブランチをGitHubのフォークにプッシュします。
+    4.  自身のフォークからオリジナルの[レポジトリ][repo]へプルリクエストを提出します。
+    5.  頂いたコメントやレビューからの提案で、更に内容を変更する場合は、
+        自分のブランチで内容を変更し、GitHubのフォークにプッシュして下さい：
+        自動的にプルリクエストの内容がアップデートされます。
 
-Each lesson has two maintainers who review issues and pull requests
-or encourage others to do so.
-The maintainers are community volunteers,
-and have final say over what gets merged into the lesson.
+全てのレッスンには二人のメインテイナーがおり、彼・彼女らがイシューやプルリクエストを管理・見直す、
+もしくはその他のメンバーに、一緒に見直すように声をかけます。
+メインテイナー達はコミュニティーのボランティアですので、
+最終的に何を変更するかの決定権は、メインテイナーに委ねられています。
 
-## Other Resources
+## その他の資料
 
-General discussion of [Software Carpentry][swc-site] and [Data Carpentry][dc-site]
-happens on the [discussion mailing list][discuss-list],
-which everyone is welcome to join.
-You can also [reach us by email][contact].
+[Software Carpentry][swc-site]と[Data Carpentry][dc-site]についての一般的なディスカッションは、
+[ディスカッション用のメーリングリスト][discuss-list]で行われ、
+どなたでも参加できます。
+また、[メール][contact]からでもご連絡いただけます。
 
 [contact]: mailto:team@carpentries.org
 [dc-issues]: https://github.com/issues?q=user%3Adatacarpentry

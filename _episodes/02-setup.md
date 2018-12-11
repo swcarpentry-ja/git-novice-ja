@@ -92,7 +92,7 @@ If you elect to use a private email address with GitHub, then use that same emai
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
 
-> ## Vimで出っています
+> ## Vimの終了の仕方
 >
 > Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving
 your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Return</kbd>.
