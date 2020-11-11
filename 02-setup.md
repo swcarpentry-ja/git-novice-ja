@@ -1,80 +1,81 @@
 ---
-title: Setting Up Git
+title: Git の設定
 teaching: 5
 exercises: 0
 questions:
-- "How do I get set up to use Git?"
-objectives:
-- "Configure `git` the first time it is used on a computer."
-- "Understand the meaning of the `--global` configuration flag."
+- Git を使うために必要な設定は何ですか？
+objectives: 
+- コンピュータで初めて `git` を使うための設定が出来るようになりましょう。
+- `--global` 設定フラグの意味を理解しましょう。
 keypoints:
--   "Use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences once per machine."
----
+-   "`git config` と `--global` オプションを使い、ユーザー名
+メールアドレス、エディタ、その他の設定を行う。---
 
-When we use Git on a new computer for the first time,
-we need to configure a few things. Below are a few examples
-of configurations we will set as we get started with Git:
+Git を新しいパソコンで初めて使う場合、
+いくつかの設定を変更しなければなりません。Git を始めるにあたって、
+私達が変更する設定をいくつか表記します：
 
-*   our name and email address,
-*   what our preferred text editor is,
-*   and that we want to use these settings globally (i.e. for every project).
+*   名前とメールアドレス、
+*   使用したいテキストエディタ、
+*   以上の設定をグローバル設定として使う（つまり、全てのプロジェクトに反映させる）。
 
-On a command line, Git commands are written as `git verb`,
-where `verb` is what we actually want to do. So here is how
-のび太 sets up his new laptop:
+コマンドラインでは、Git コマンドは `git <動詞>` と入力します。
+ここでの「動詞」は、Git に何をさせたいのかを表します。ドラキュラが新しいユーザーの場合、
+以下のようにコンピュータを設定します：
 
 ~~~
-$ git config --global user.name “野比 のび太"
-$ git config --global user.email “nobita@doko.demo.doa”
+$ git config --global user.name "Vlad Dracula"
+$ git config --global user.email "vlad@tran.sylvan.ia"
 ~~~
 {: .language-bash}
 
-Please use your own name and email address instead of のび太's. This user name and email will be associated with your subsequent Git activity,
-which means that any changes pushed to
-[GitHub](https://github.com/),
-[BitBucket](https://bitbucket.org/),
-[GitLab](https://gitlab.com/) or
-another Git host server
-in a later lesson will include this information.
+ここでは、ドラキュラの代わりに自分の名前とメールアドレスを使いましょう。ここで入力した名前とメールアドレスは、これから行う Git での作業に関わってきます。
+というのも、これからのレッスンで
+[GitHub](https://github.com/)、
+[BitBucket](https://bitbucket.org/)、
+[GitLab](https://gitlab.com/)、または
+その他の Git をホストするサーバーに
+変更箇所を「プッシュ」した（送った）際に、これらの情報が使われるからです。
 
-> ## Line Endings
+> ## 改行コード
 >
-> As with other keys, when you hit <kbd>Return</kbd> on your keyboard,
-> your computer encodes this input as a character.
-> For reasons that are long to explain, different operating systems
-> use different character(s) to represent the end of a line.
-> (You may also hear these referred to as newlines or line breaks.)
-> Because Git uses these characters to compare files,
-> it may cause unexpected issues when editing a file on different machines.
+> 他のキーと同様に、<kbd>Return</kbd> キーを押すと、
+> コンピュータはそれを文字として入力します。
+> 話が長くなるので詳しい説明は省きますが、行末に使われる文字は
+> オペレーティングシステム（OS）よって違います。
+> （行末に使われる文字を「改行コード」と呼びます。）
+> Git は、改行コードを使ってファイルの違いを確かめるため、
+> 違うパソコンでファイルを編集した時に思わぬ問題が起こるかもしれません。
 >
-> You can change the way Git recognizes and encodes line endings
-> using the `core.autocrlf` command to `git config`.
-> The following settings are recommended:
+> Git がどのように改行コードを理解・変換するかは、
+> `git config` の `core.autocrlf` コマンドを使って変更できます。
+> 以下の設定をおすすめします：
 >
-> On macOS and Linux:
+> MacOS と Linux：
 >
 > ~~~
 > $ git config --global core.autocrlf input
 > ~~~
 > {: .language-bash}
 >
-> And on Windows:
+> Windows：
 >
 > ~~~
 > $ git config --global core.autocrlf true
 > ~~~
 > {: .language-bash}
 > 
-> You can read more about this issue 
-> [on this GitHub page](https://help.github.com/articles/dealing-with-line-endings/).
+> この問題についてもっと詳しく知りたければ、 
+> [こちらの GitHub ページ](https://help.github.com/articles/dealing-with-line-endings/)
+を参照してください。
 {: .callout}
 
-For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
-If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one. You can change the email address later on by using the `git config` command again.
+これらのレッスンでは、[GitHub](https://github.com/) に接続するので、GitHub アカウントと同じメールアドレスに設定してください。プライバシーについて気になる方は、[GitHub のメールアドレスをプライベートにするための説明][git-privacy] を参照してください。
+GitHub が提供するプライベートメールアドレスを使う場合は、同じメールアドレスを `user.email` の値に設定してください（例：`username@users.noreply.github.com`）。メールアドレスは `git config` コマンドでいつでも変えることができます。
 
-のび太 also has to set his favorite text editor, following this table:
+以下の表を参考に、ドラキュラはテキストエディタも設定しました：
 
-| Editor             | Configuration command                            |
+| エディタ             | 設定コマンド                            |
 |:-------------------|:-------------------------------------------------|
 | Atom | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
@@ -90,33 +91,33 @@ If you elect to use a private email address with GitHub, then use that same emai
 | Emacs              | `$ git config --global core.editor "emacs"`   |
 | Vim                | `$ git config --global core.editor "vim"`   |
 
-It is possible to reconfigure the text editor for Git whenever you want to change it.
+設定したテキストエディタもいつでも変更することができます。
 
-> ## Vimの終了の仕方
+> ## Vim の終了の仕方
 >
-> Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving
-your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Return</kbd>.
-> If you want to save your changes and quit, press <kbd>Esc</kbd> then type `:wq` and hit <kbd>Return</kbd>.
+> 多くのソフトの初期設定では、Vim がデフォルトのテキストエディタに設定されています。保存せずに Vim を終了するには、
+ <kbd>Esc</kbd> キーを押した後に `:q!` と入力してから <kbd>Return</kbd> キーを押してください。
+> 保存してから終了するには、 <kbd>Esc</kbd> キーを押してから `:wq` と入力して <kbd>Return</kbd> キーを押してください。
 {: .callout}
 
-The four commands we just ran above only need to be run once: the flag `--global` tells Git
-to use the settings for every project, in your user account, on this computer.
+上記の4つのコマンドは、一度実行するだけで十分です。`--global` フラグは Git に、
+今使っているパソコン内にある自分のアカウントに関連する全てのプロジェクトに同じ設定をするように指示しています。
 
-You can check your settings at any time:
+自分の設定はいつでも確認できます：
 
 ~~~
 $ git config --list
 ~~~
 {: .language-bash}
 
-You can change your configuration as many times as you want: just use the
-same commands to choose another editor or update your email address.
+これらの設定はいつでも変えることができます。
+以前使ったコマンドを使えば、違うエディタやメールアドレスに変えることができます。
 
-> ## Proxy
+> ## プロキシ
 >
-> In some networks you need to use a
-> [proxy](https://en.wikipedia.org/wiki/Proxy_server). If this is the case, you
-> may also need to tell Git about the proxy:
+> ネットワーク環境によっては
+> [プロキシ](https://en.wikipedia.org/wiki/Proxy_server) を使わなければならないかもしれません。
+> この場合、プロキシの設定が必要です：
 >
 > ~~~
 > $ git config --global http.proxy proxy-url
@@ -124,7 +125,7 @@ same commands to choose another editor or update your email address.
 > ~~~
 > {: .language-bash}
 >
-> To disable the proxy, use
+> プロキシを無効にするには：
 >
 > ~~~
 > $ git config --global --unset http.proxy
@@ -133,9 +134,9 @@ same commands to choose another editor or update your email address.
 > {: .language-bash}
 {: .callout}
 
-> ## Git Help and Manual
+> ## Git のヘルプとマニュアル
 >
-> Always remember that if you forget a `git` command, you can access the list of commands by using `-h` and access the Git manual by using `--help` :
+> `git` のコマンドを忘れた時は、`-h` を使えばコマンドの一覧を、`--help` を使えばマニュアルを見ることができます：
 >
 > ~~~
 > $ git config -h
