@@ -1,20 +1,20 @@
 ---
-title: Creating a Repository
+title: リポジトリの作成
 teaching: 10
 exercises: 0
 questions:
-- "Where does Git store information?"
+- "Gitはどこに情報を格納しますか?"
 objectives:
-- "Create a local Git repository."
+- "ローカルのGitリポジトリを作成する。"
 keypoints:
-- "`git init` initializes a repository."
-- "Git stores all of its repository data in the `.git` directory."
+- "`git init` はリポジトリを初期化する。"
+- "Gitはリポジトリデータのすべてを`.git`ディレクトリに格納する。"
 ---
 
-Once Git is configured,
-we can start using it.
+Gitの設定ができたら、
+それを使い始めることができます。
 
-First, let's create a directory in `Desktop` folder for our work and then move into that directory:
+まず、`Desktop`フォルダーに作業用のディレクトリを作成し、そのディレクトリに移動しましょう:
 
 ~~~
 $ cd ~/Desktop
@@ -23,24 +23,24 @@ $ cd planets
 ~~~
 {: .language-bash}
 
-Then we tell Git to make `planets` a [repository]({{ page.root }}/reference#repository)—a place where
-Git can store versions of our files:
+次に、Gitに`planets`を[リポジトリ]({{ page.root }}/reference#repository)—
+（Gitがファイルのバージョンを保存できる場所）にするように伝えます。
 
 ~~~
 $ git init
 ~~~
 {: .language-bash}
 
-If we use `ls` to show the directory's contents,
-it appears that nothing has changed:
+`ls` を使ってディレクトリの内容を表示すると、
+何も変更されていないように見えます:
 
 ~~~
 $ ls
 ~~~
 {: .language-bash}
 
-But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `planets` called `.git`:
+ですが `-a` フラグを追加してすべてを表示すると、
+Git が `.git`という隠しディレクトリを `planets` の中に作ったことがわかります: 
 
 ~~~
 $ ls -a
@@ -52,21 +52,20 @@ $ ls -a
 ~~~
 {: .output}
 
-Git uses this special sub-directory to store all the information about the project, 
-including all files and sub-directories located within the project's directory.
-If we ever delete the `.git` sub-directory,
-we will lose the project's history.
+Git はプロジェクトのディレクトリ内にあるすべてのファイルとサブディレクトリを含む、プロジェクトに関するすべての情報を格納するためにこの特別なサブディレクトリを 使用します。
+`.git` サブディレクトリを削除すると、
+プロジェクトの履歴を失うことになります。
 
-We can check that everything is set up correctly
-by asking Git to tell us the status of our project:
+プロジェクトのステータスをGitに問うことで、
+すべてが正しく設定されていることを確認できます:
 
 ~~~
 $ git status
 ~~~
 {: .language-bash}
 
-If you are using a different version of `git`, the exact
-wording of the output might be slightly different.
+使用している`git`のバージョンによって、
+出力の表現が少し異なるかもしれません。
 
 ~~~
 # On branch master
@@ -77,42 +76,35 @@ nothing to commit (create/copy files and use "git add" to track)
 ~~~
 {: .output}
 
-> ## Places to Create Git Repositories
+> ## Git リポジトリを作る場所
 >
-> Along with tracking information about planets (the project we have already created), 
-> のび太 would also like to track information about moons.
-> Despite ドラえもん's concerns, のび太 creates a `moons` project inside his `planets` 
-> project with the following sequence of commands:
+> planets (すでに作成したプロジェクト) についての情報を追跡すると共に、 
+> ドラキュラは moons についての情報も追跡したいと考えています。
+> 狼男の心配にもかかわらず、ドラキュラは次の一連のコマンドを使って、彼の `planets` 
+> プロジェクト内に `moons` プロジェクトを作ります:
 >
 > ~~~
-> $ cd ~/Desktop   # return to Desktop directory
-> $ cd planets     # go into planets directory, which is already a Git repository
-> $ ls -a          # ensure the .git sub-directory is still present in the planets directory
-> $ mkdir moons    # make a sub-directory planets/moons
-> $ cd moons       # go into moons sub-directory
-> $ git init       # make the moons sub-directory a Git repository
-> $ ls -a          # ensure the .git sub-directory is present indicating we have created a new Git repository
+> $ cd ~/Desktop   # Desktop ディレクトリに戻ります
+> $ cd planets     # すでに Git リポジトリである planets ディレクトリ移動します
+> $ ls -a          # .git サブディレクトリがまだ planets ディレクトリに存在することを確認します
+> $ mkdir moons    # サブディレクトリ planets/moons を作ります
+> $ cd moons       # moons サブディレクトリに移動します
+> $ git init       # moons サブディレクトリをGitリポジトリにします
+> $ ls -a          # .git サブディレクトリが存在し、新しいGitリポジトリが作られたと示していることを確認します。
 > ~~~
 > {: .language-bash}
 >
-> Is the `git init` command, run inside the `moons` sub-directory, required for 
-> tracking files stored in the `moons` sub-directory?
+> `git init` コマンドは、`moons` サブディレクトリ内で実行され、> `moons` サブディレクトリに保存されているファイルを追跡するために必要でしょうか?
 > 
-> > ## Solution
+> > ## 解答
 > >
-> > No. のび太 does not need to make the `moons` sub-directory a Git repository 
-> > because the `planets` repository will track all files, sub-directories, and 
-> > sub-directory files under the `planets` directory.  Thus, in order to track 
-> > all information about moons, のび太 only needed to add the `moons` sub-directory
-> > to the `planets` directory.
+> > いいえ。ドラキュラは `moons` サブディレクトリを Git リポジトリにする必要はありません。 
+> > `planets` リポジトリは、`planets` ディレクトリの下のすべてのファイル、サブディレクトリ、> > およびサブディレクトリファイルを追跡するからです。従って、> > moons についてのすべての情報を追跡するのは、ドラキュラが `moons` サブディレクトリを> > `planets` ディレクトリに追加するだけで済みます。
 > > 
-> > Additionally, Git repositories can interfere with each other if they are "nested":
-> > the outer repository will try to version-control
-> > the inner repository. Therefore, it's best to create each new Git
-> > repository in a separate directory. To be sure that there is no conflicting
-> > repository in the directory, check the output of `git status`. If it looks
-> > like the following, you are good to go to create a new repository as shown
-> > above:
+> > それと、Git リポジトリが"入れ子にされている"場合、Gitリポジトリは互いに干渉する可能性があります:
+> > 外側のリポジトリは内側のリポジトリのバージョン管理を
+> > しようとします。したがって、新しいGitリポジトリはそれぞれ
+> > 別のディレクトリに作るのがベストです。ディレクトリに競合するリポジトリが> > がないことを確認するには、`git status`の出力を確認します。次のような場合は、> > 上の方で示したように新しいリポジトリを作ることをお勧めします:
 > >
 > > ~~~
 > > $ git status

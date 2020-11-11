@@ -124,7 +124,7 @@ Branch master set up to track remote branch master from origin.
 ~~~
 {: .output}
 
-> ## Proxy
+> ## プロキシ
 >
 > If the network you are connected to uses a proxy, there is a chance that your
 > last command failed with "Could not resolve hostname" as the error message. To

@@ -1,77 +1,75 @@
 ---
-title: Automated Version Control
+title: 自動的なバージョン管理
 teaching: 5
 exercises: 0
-questions:
-- "What is version control and why should I use it?"
-objectives:
-- "Understand the benefits of an automated version control system."
-- "Understand the basics of how Git works."
-keypoints:
-- "Version control is like an unlimited 'undo'."
-- "Version control also allows many people to work in parallel."
+疑問:
+- "バージョン管理って何？なんで必要なの？"
+目的:
+- "自動的なバージョン管理システムの利点を理解する。"
+- "Gitの基本を理解する。"
+まとめ:
+- "バージョン管理とは、制限無く「元に戻す」ことができる機能。"
+- "バージョン管理を使えば、複数の人と同時進行で作業をする事が出来る。"
 ---
 
-We'll start by exploring how version control can be used
-to keep track of what one person did and when.
-Even if you aren't collaborating with other people,
-automated version control is much better than this situation:
+それではまず、どのようにしてバージョン管理システムが
+「いつ」、「何」を、「誰」が編集したのかを記録・管理しているかを見ていきましょう。
+他の人と共同作業をしていなくても、
+以下の状況に陥るより、自動的なバージョン管理を使うほうが大分良いはずです：
 
 [![Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531](../fig/phd101212s.png)](http://www.phdcomics.com)
 
-"Piled Higher and Deeper" by Jorge Cham, http://www.phdcomics.com
+「高く、深く積み上げる」Jorge Cham 作、http://www.phdcomics.com
 
-We've all been in this situation before: it seems ridiculous to have
-multiple nearly-identical versions of the same document. Some word
-processors let us deal with this a little better, such as Microsoft
-Word's [Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a), Google Docs' [version
-history](https://support.google.com/docs/answer/190843?hl=en), or LibreOffice's [Recording and Displaying Changes](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes).
+皆さんもこんな経験をされたことがあるはずです。複数の、（それもほとんど
+内容が同じの）文書のコピーを保存しておくのは馬鹿げたことです。文書作成ソフトの中には、
+例えばMicrosoft Wordの[変更履歴](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a)、Google Docsの[バージョン履歴](https://support.google.com/docs/answer/190843?hl=en)、LibreOfficeの[変更の記録・表示](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes)、
+こういった状況にある程度うまく対応できるものもあります。
 
-Version control systems start with a base version of the document and
-then record changes you make each step of the way. You can
-think of it as a recording of your progress: you can rewind to start at the base
-document and play back each change you made, eventually arriving at your
-more recent version.
+バージョン管理システムは、基礎となるドキュメントを元に、
+加えられた全ての変更点を記録していきます。ドキュメントの
+進歩を記録していると考えてもらって構いません。変更点を最初の状況まで
+戻してから、最新版になるまでの変更を一つずつ再現していくことができます。
 
 ![Changes Are Saved Sequentially](../fig/play-changes.svg)
 
-Once you think of changes as separate from the document itself, you
-can then think about "playing back" different sets of changes on the base document, ultimately
-resulting in different versions of that document. For example, two users can make independent
-sets of changes on the same document. 
+「変更点」と「ドキュメント」を別々の物として考えてみると、基礎となるドキュメントに
+異なる変更点を「再現」する事によって、結果的に違ったバージョンのドキュメントを
+作る事が可能だという事が分かります。例えば、下の図のように二人のユーザーが同じドキュメントに
+違った編集を加えた場合です。
 
 ![Different Versions Can be Saved](../fig/versions.svg)
 
-Unless there are conflicts, you can even incorporate two sets of changes into the same base document.
+変更点の衝突（コンフリクト）が無ければ、二つ以上の違った変更点を基礎ドキュメントに加えることさえできます。
 
 ![Multiple Versions Can be Merged](../fig/merge.svg)
 
-A version control system is a tool that keeps track of these changes for us,
-effectively creating different versions of our files. It allows us to
-decide which changes will be made to the next version (each record of these changes is called a
-[commit]({{ page.root }}/reference#commit)), and keeps useful metadata about them. The
-complete history of commits for a particular project and their metadata make up
-a [repository]({{ page.root }}/reference#repository). Repositories can be kept in sync
-across different computers, facilitating collaboration among different people.
+バージョン管理システムは、ユーザーがドキュメントに加えた変更点を記録するツールであり、
+結果的にドキュメントの違ったバージョンを作成する事ができます。このツールを活用
+する事によって、次のバージョンに加える変更点（個々の変更点は
+[「commit（コミット）」]({{ page.root }}/reference#commit)と呼びます）を決める事ができ、変更点に関するメタデータも一緒に保存する事ができます。
+特定のプロジェクトのコミット履歴とそれに関するメタデータを総じて
+[「repository（リポジトリ）」]({{ page.root }}/reference#repository)と呼びます。リポジトリは
+別々のコンピュータと同期させる事が出来るので、他人との共同作業を潤滑に進めることが可能になります。
 
-> ## バージョンコントールシステムの長い歴史
+> ## バージョン管理システムの長い歴史
 >
-> Automated version control systems are nothing new.
-> Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies.
-> However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities.
-> More modern systems, such as Git and [Mercurial](https://swcarpentry.github.io/hg-novice/),
-> are *distributed*, meaning that they do not need a centralized server to host the repository.
-> These modern systems also include powerful merging tools that make it possible for multiple authors to work on
-> the same files concurrently.
+> 自動化されたバージョン管理システムは最近発明されたものではありません。
+> RCS、CVS、Subversionなどのツールは1980年前半から存在しており、多くの会社に使われていました。
+> しかし、これらのツールでは出来る事に制限があり、多くはもう時代遅れとされています。
+> 現代使われているシステム、例えばGitや[Mercurial](https://swcarpentry.github.io/hg-novice/)、は
+> *分散*されています。というのは、特定のサーバーを必要とせずにシステムをホストする事が出来るという事です。
+> 現代のシステムには大変便利で効果的な「merge（マージ）」機能が備われており、同じファイルを
+> 複数人で作業する事が可能になりました。
 {: .callout}
 
-> ## Paper Writing
+> ## 論文を書くにあたって
 >
-> *   Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin it. How would you retrieve
->     the *excellent* version of your conclusion? Is it even possible?
+> *   例えば、論文のために数百行書いたとします。しばらくして、間違えてその文章を編集してしまいます。
+>     どうしたら以前書いた文章を取り戻すことができるのでしょう？そもそも、可能なのでしょうか？
 >
-> *   Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper?
->     If you use LibreOffice Writer or Microsoft Word, what happens if you accept changes made using the
->     `Track Changes` option? Do you have a history of those changes?
+> *   五人の共著者がいるとします。どうやって全員の変更やコメントを管理すれば良いのでしょう？
+>     LibreOffice WriterやMicrosoft Wordの場合、こういった変更やコメントを変更履歴機能で受け入れると
+>     どうなるのでしょう？変更点は記録されるのでしょうか？
 {: .challenge}
 
