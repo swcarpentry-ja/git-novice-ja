@@ -1,5 +1,5 @@
 ---
-title: Git の設定
+title: Gitの設定
 teaching: 5
 exercises: 0
 questions:
@@ -8,7 +8,7 @@ objectives:
 - コンピュータで初めて `git` を使うための設定が出来るようになりましょう。
 - `--global` 設定フラグの意味を理解しましょう。
 keypoints:
--   "`git config` と `--global` オプションを使い、ユーザー名
+-   `git config` と `--global` オプションを使い、ユーザー名
 メールアドレス、エディタ、その他の設定を行う。
 ---
 
