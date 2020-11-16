@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "投稿者の行動規範"
-permalink: /conduct/
+permalink: /ja/conduct/
 ---
 プロジェクト貢献者・保持者は、
 [カーペントリーの行動規範][coc]に基づき行動することを誓います。
