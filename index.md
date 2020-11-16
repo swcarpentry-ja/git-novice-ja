@@ -1,5 +1,6 @@
 ---
 layout: lesson
+title: "Gitでバージョン管理"
 root: /ja/
 permalink: /ja/index.html
 ---
