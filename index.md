@@ -1,7 +1,7 @@
 ---
 layout: lesson
-root: /ja/  # Is the only page that doesn't follow the pattern /:path/index.html
-permalink: /ja/index.html  # Is the only page that doesn't follow the pattern /:path/index.html
+root: /ja/
+permalink: /ja/index.html
 ---
 
 ドラえもんとのび太はに火星に惑星無人探査機を送ることができるかどうか、

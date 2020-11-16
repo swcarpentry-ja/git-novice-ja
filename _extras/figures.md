@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Figures
-permalink: /figures/
+permalink: /ja/figures/
 ---
 
