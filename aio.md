@@ -1,6 +1,7 @@
 ---
 layout: page 
 permalink: /ja/aio/
+permalink: /ja/aio/
 ---
 <script>
   window.onload = function() {
