@@ -17,7 +17,7 @@ keypoints:
 他の人と共同作業をしていなくても、
 以下の状況に陥るより、自動的なバージョン管理を使うほうが大分良いはずです：
 
-[![Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531](../../fig/phd101212s.png)](http://www.phdcomics.com)
+[![Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531](../../../fig/phd101212s.png)](http://www.phdcomics.com)
 
 「高く、深く積み上げる」Jorge Cham 作、http://www.phdcomics.com
 
@@ -31,18 +31,18 @@ keypoints:
 進歩を記録していると考えてもらって構いません。変更点を最初の状況まで
 戻してから、最新版になるまでの変更を一つずつ再現していくことができます。
 
-![Changes Are Saved Sequentially](../../fig/play-changes.svg)
+![Changes Are Saved Sequentially](../../../fig/play-changes.svg)
 
 「変更点」と「ドキュメント」を別々の物として考えてみると、基礎となるドキュメントに
 異なる変更点を「再現」する事によって、結果的に違ったバージョンのドキュメントを
 作る事が可能だという事が分かります。例えば、下の図のように二人のユーザーが同じドキュメントに
 違った編集を加えた場合です。
 
-![Different Versions Can be Saved](../../fig/versions.svg)
+![Different Versions Can be Saved](../../../fig/versions.svg)
 
 変更点の衝突（コンフリクト）が無ければ、二つ以上の違った変更点を基礎ドキュメントに加えることさえできます。
 
-![Multiple Versions Can be Merged](../../fig/merge.svg)
+![Multiple Versions Can be Merged](../../../fig/merge.svg)
 
 バージョン管理システムは、ユーザーがドキュメントに加えた変更点を記録するツールであり、
 結果的にドキュメントの違ったバージョンを作成する事ができます。このツールを活用
